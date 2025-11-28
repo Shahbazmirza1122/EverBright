@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white dark:bg-dark-950 transition-colors duration-300">
+    <div className="relative min-h-screen flex items-center justify-center pt-48 overflow-hidden bg-white dark:bg-dark-950 transition-colors duration-300">
       
       {/* Background Elements - Using standard tailwind animate-pulse */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
@@ -61,15 +61,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 mb-8 backdrop-blur-sm animate-fade-in-up">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
-          </span>
-          <span className="text-sm font-medium text-slate-600 dark:text-slate-300">Accepting new ambitious projects</span>
-        </div>
-
+        
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-6 leading-tight min-h-[80px] md:min-h-[140px] animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <span className="text-primary-600 dark:text-primary-500 shadow-primary-500/20 drop-shadow-lg">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Target, Users, Lightbulb, TrendingUp, Figma, Globe, Smartphone, Database, Code2, BrainCircuit } from 'lucide-react';
+import { Target, Lightbulb, TrendingUp, Figma, Globe, Smartphone, Database, Code2, BrainCircuit } from 'lucide-react';
 
 const AnimatedCounter = ({ end, duration = 3000, suffix = '' }: { end: number, duration?: number, suffix?: string }) => {
   const [count, setCount] = useState(0);
@@ -155,21 +155,6 @@ const About: React.FC = () => {
                 </div>
 
               </div>
-
-              {/* Stats Floating (Optional) */}
-              <div className="absolute bottom-0 right-4 md:right-10 bg-white/90 dark:bg-dark-900/90 backdrop-blur border border-slate-200 dark:border-slate-800 p-3 md:p-4 rounded-xl shadow-xl z-30 transform translate-y-1/2 hidden sm:block">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-primary-500/20 p-2 rounded-lg">
-                      <Users className="h-5 w-5 text-primary-600 dark:text-primary-500" />
-                    </div>
-                    <div>
-                      <p className="text-xl font-bold text-slate-900 dark:text-white leading-none">
-                        <AnimatedCounter end={50} suffix="+" />
-                      </p>
-                      <p className="text-slate-600 dark:text-slate-400 text-xs mt-1">Experts</p>
-                    </div>
-                  </div>
-              </div>
             </div>
 
             <div>
@@ -185,12 +170,18 @@ const About: React.FC = () => {
                 Our approach combines technical excellence with creative innovation. We don't just write code; we craft digital experiences that resonate with users and drive tangible business results for our partners worldwide.
               </p>
               
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 <div className="border-l-2 border-primary-500 pl-4">
                   <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
                     <AnimatedCounter end={100} suffix="+" />
                   </h4>
                   <p className="text-slate-500 text-sm">Projects Delivered</p>
+                </div>
+                <div className="border-l-2 border-purple-500 pl-4">
+                  <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                    <AnimatedCounter end={50} suffix="+" />
+                  </h4>
+                  <p className="text-slate-500 text-sm">Expert Engineers</p>
                 </div>
                 <div className="border-l-2 border-secondary-500 pl-4">
                   <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
