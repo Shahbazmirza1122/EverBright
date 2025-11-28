@@ -75,7 +75,7 @@ const Logo: React.FC<LogoProps> = ({ className = "h-10", allowUpload = true }) =
       <input 
         type="file" 
         ref={fileInputRef} 
-        className="hidden" 
+        style={{ display: 'none' }}
         accept="image/png, image/jpeg, image/svg+xml, image/webp" 
         onChange={handleFileChange}
       />
@@ -89,9 +89,11 @@ const Logo: React.FC<LogoProps> = ({ className = "h-10", allowUpload = true }) =
           onError={() => setHasError(true)}
         />
       ) : (
-        <span className="text-2xl font-bold font-display text-slate-900 dark:text-white tracking-tight whitespace-nowrap">
-          EverBright
-        </span>
+        <div className="flex items-center gap-2">
+           <span className="text-3xl font-bold font-display tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600 dark:from-primary-400 dark:to-secondary-400">
+            EverBright
+          </span>
+        </div>
       )}
 
       {/* Upload Overlay - Visible on Hover */}

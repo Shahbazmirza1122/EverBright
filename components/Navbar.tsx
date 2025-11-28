@@ -38,8 +38,8 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth'})}>
-            {/* Increased height for PNG Logo visibility */}
-            <Logo className="h-16 w-auto md:h-20" />
+            {/* Increased height for Logo visibility */}
+            <Logo className="h-20 w-auto md:h-24" />
           </div>
 
           {/* Desktop Nav */}

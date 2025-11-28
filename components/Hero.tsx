@@ -52,14 +52,16 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white dark:bg-dark-950 transition-colors duration-300">
-      {/* Background Elements */}
+      
+      {/* Background Elements - Using standard tailwind animate-pulse */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-200/40 dark:bg-primary-600/20 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary-200/40 dark:bg-secondary-600/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-[20%] right-[20%] w-[30%] h-[30%] bg-purple-200/30 dark:bg-purple-600/10 rounded-full blur-[100px]"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-200/40 dark:bg-primary-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary-200/40 dark:bg-secondary-600/20 rounded-full blur-[120px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[20%] right-[20%] w-[30%] h-[30%] bg-purple-200/30 dark:bg-purple-600/10 rounded-full blur-[100px] animate-float"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 mb-8 backdrop-blur-sm animate-fade-in-up">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
@@ -68,7 +70,8 @@ const Hero: React.FC = () => {
           <span className="text-sm font-medium text-slate-600 dark:text-slate-300">Accepting new ambitious projects</span>
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-6 leading-tight min-h-[80px] md:min-h-[140px]">
+        {/* Heading */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-6 leading-tight min-h-[80px] md:min-h-[140px] animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <span className="text-primary-600 dark:text-primary-500 shadow-primary-500/20 drop-shadow-lg">
             {text1}
           </span>
@@ -78,11 +81,12 @@ const Hero: React.FC = () => {
           <span className="animate-pulse text-primary-500 font-light ml-1">|</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           We blend cutting-edge technology with world-class design to build scalable software solutions that drive business growth.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           <Button 
             variant="primary" 
             size="lg" 
@@ -103,32 +107,49 @@ const Hero: React.FC = () => {
           </Button>
         </div>
 
-        {/* Floating Icons Representation */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto border-t border-slate-200 dark:border-slate-800/50 pt-16">
+        {/* Floating Icons Representation - UPDATED ANIMATION */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto border-t border-slate-200 dark:border-slate-800/50 pt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          
           <div className="flex flex-col items-center gap-4 group cursor-default">
-             <div className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-primary-600 dark:text-primary-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-all duration-300 group-hover:scale-110 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-primary-500/50 group-hover:shadow-xl group-hover:shadow-primary-500/20">
+             <div 
+               className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-primary-600 dark:text-primary-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-colors duration-300 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-primary-500/50 animate-breathe"
+               style={{ animationDelay: '0s' }}
+             >
                 <Code className="h-8 w-8 transition-transform duration-300" />
              </div>
              <span className="font-semibold text-slate-700 dark:text-white text-lg transition-colors duration-300 group-hover:text-primary-600 dark:group-hover:text-primary-400">Clean Code</span>
           </div>
+
           <div className="flex flex-col items-center gap-4 group cursor-default">
-             <div className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-purple-600 dark:text-purple-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-all duration-300 group-hover:scale-110 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-purple-500/50 group-hover:shadow-xl group-hover:shadow-purple-500/20">
+             <div 
+               className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-purple-600 dark:text-purple-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-colors duration-300 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-purple-500/50 animate-breathe"
+               style={{ animationDelay: '0.7s' }}
+             >
                 <Layers className="h-8 w-8 transition-transform duration-300" />
              </div>
              <span className="font-semibold text-slate-700 dark:text-white text-lg transition-colors duration-300 group-hover:text-purple-600 dark:group-hover:text-purple-400">Modern Stack</span>
           </div>
+
           <div className="flex flex-col items-center gap-4 group cursor-default">
-             <div className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-pink-600 dark:text-pink-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-all duration-300 group-hover:scale-110 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-pink-500/50 group-hover:shadow-xl group-hover:shadow-pink-500/20">
+             <div 
+               className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-pink-600 dark:text-pink-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-colors duration-300 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-pink-500/50 animate-breathe"
+               style={{ animationDelay: '1.4s' }}
+             >
                 <Database className="h-8 w-8 transition-transform duration-300" />
              </div>
              <span className="font-semibold text-slate-700 dark:text-white text-lg transition-colors duration-300 group-hover:text-pink-600 dark:group-hover:text-pink-400">Scalable Arch</span>
           </div>
+
           <div className="flex flex-col items-center gap-4 group cursor-default">
-             <div className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-emerald-600 dark:text-emerald-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-all duration-300 group-hover:scale-110 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-emerald-500/50 group-hover:shadow-xl group-hover:shadow-emerald-500/20">
+             <div 
+               className="p-5 bg-white dark:bg-slate-800/50 rounded-2xl text-emerald-600 dark:text-emerald-400 ring-1 ring-slate-200 dark:ring-slate-700/50 transition-colors duration-300 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 group-hover:ring-emerald-500/50 animate-breathe"
+               style={{ animationDelay: '2.1s' }}
+             >
                 <ArrowRight className="h-8 w-8 transition-transform duration-300" />
              </div>
              <span className="font-semibold text-slate-700 dark:text-white text-lg transition-colors duration-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">Fast Delivery</span>
           </div>
+
         </div>
       </div>
     </div>
