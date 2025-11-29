@@ -84,7 +84,7 @@ const StartProjectModal: React.FC<StartProjectModalProps> = ({ isOpen, onClose }
         {/* Header */}
         <div className="flex justify-between items-center p-6 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-dark-900/50">
           <div>
-            <div className="h-20 mb-2">
+            <div className="h-24 mb-2">
               <Logo className="h-full w-auto" />
             </div>
             <p className="text-slate-600 dark:text-slate-400 text-sm ml-1">Tell us about your vision</p>

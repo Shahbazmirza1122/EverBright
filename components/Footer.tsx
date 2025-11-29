@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <div className="flex items-center mb-6">
               {/* Increased size significantly */}
-              <Logo className="h-28 w-auto" />
+              <Logo className="h-36 w-auto" />
             </div>
             <p className="text-slate-600 dark:text-slate-500 text-sm leading-relaxed mb-6">
               We design and build digital products that help brands grow and succeed in the modern economy.

@@ -24,7 +24,7 @@ const Logo: React.FC<LogoProps> = ({ className = "h-10" }) => {
 
   return (
     <img 
-      src="/logo.png" 
+      src="https://res.cloudinary.com/dn93gd6yw/image/upload/v1764420447/Blue_and_Green_Business_Technology_Globe_Logo_1_cbmajj.png" 
       alt="EverBright Logo" 
       className={`${className} object-contain`}
       onError={() => setImageError(true)}

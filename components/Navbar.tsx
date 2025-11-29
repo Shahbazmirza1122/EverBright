@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
         <div className="flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth'})}>
             {/* Increased height for Logo visibility */}
-            <Logo className="h-20 w-auto md:h-24" />
+            <Logo className="h-24 w-auto md:h-32" />
           </div>
 
           {/* Desktop Nav */}
